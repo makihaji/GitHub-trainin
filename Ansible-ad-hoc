@@ -1,0 +1,16 @@
+ansible mhost1 -b -m yum -a "name=httpd state=latest"
+
+ansible mhost1 -b -m yum -a "name=httpd state=absent"
+
+ansible mhost1 -m file -a "path=/homeuser/newfile1 state=touch"
+
+ansible mhost1 -m file -a "path=/home/somal/newfile2 state=absent"
+
+ansible mhost1 -m file -a "path=/home/somal/newfile1 mode=0400"
+ansible mhost1 -b -m file -a "path=/home/somal owner=somal"
+
+nsible mhost1 -b -m user -a "name=sam"
+
+ansible mhost1 -b -m user -a "name=sam append=yes group=wheel"
+
+~                                        
