@@ -1,2 +1,0 @@
-this is test file from Git central repo
-added and modified by maki
