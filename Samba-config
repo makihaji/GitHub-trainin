@@ -1,0 +1,25 @@
+yum instalsamba*
+ls -ltr /etc/samba/smb.conf
+ mkdir /sambashare
+cd /sambashare/
+touch admin1 admin2 admin3 admin4
+ls
+cp -p /etc/samba/smb.conf /etc/samba/smb.confbkup
+ vim /etc/samba/smb.conf
+[folde]
+        comment = share samba file
+        path = /sambashare
+        public = no
+        valid users = maki
+        writable = yes
+        printable = no
+        write list = +staff
+systemctl restart smb
+systemctl status smb
+  systemctl enable smb
+useradd maki
+   88  passwd maki 
+smbpasswd -a maki
+ testparm 
+
+
